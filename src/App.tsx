@@ -40,6 +40,8 @@ export class App extends React.Component<{}, Props> {
 
   componentWillUnmount(): void {
     window.clearInterval(this.timerId);
+    document.removeEventListener('contextmenu', this.handleHideClockRight);
+    document.removeEventListener('click', this.handleHideClockLeft);
   }
 
   render(): React.ReactNode {

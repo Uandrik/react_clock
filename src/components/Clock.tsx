@@ -1,7 +1,6 @@
 import React from 'react';
 type State = {
   today: Date;
-  clockName: string;
 };
 
 type Props = {
@@ -11,7 +10,6 @@ type Props = {
 export class Clock extends React.Component<Props, State> {
   state: Readonly<State> = {
     today: new Date(),
-    clockName: this.props.clockName,
   };
 
   timerId = 0;
